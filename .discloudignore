@@ -1,0 +1,21 @@
+
+# Ignored structure
+
+# Folders
+/.vscode
+/deprecated
+/discloud
+/node_modules
+
+# Files
+/.env.development
+/.env.dev
+/.env.example
+/.gitignore
+/README.md
+
+# Extensions
+*.md
+*.zip
+*.exe
+*.development.json

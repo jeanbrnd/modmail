@@ -1,0 +1,12 @@
+
+model Config { 
+  id String @id @default("default")
+  
+  guild String?
+  category String?
+  channelLogs String?
+  rolePermission String?
+ 
+  @@map("configs")
+}
+
