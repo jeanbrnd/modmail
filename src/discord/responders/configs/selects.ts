@@ -16,28 +16,28 @@ createResponder({
             case "category": {                  
                 const category = values[0];
                 const configs = await db.configs.update({ category });
-                interaction.editReply(menus.configs.main({ configs, member, client, locale }));
+                await interaction.editReply(menus.configs.main({ configs, member, client, locale }));
                 return;
             };
 
             case "guild": {               
                 const guild = values[0];
                 const configs = await db.configs.update({ guild });
-                interaction.editReply(menus.configs.main({ configs, member, client, locale }));
+                await interaction.editReply(menus.configs.main({ configs, member, client, locale }));
                 return;
             };
 
             case "channel": {     
                 const channelLogs = values[0];
                 const configs = await db.configs.update({ channelLogs });
-                interaction.editReply(menus.configs.main({ configs, member, client, locale }));
+                await interaction.editReply(menus.configs.main({ configs, member, client, locale }));
                 return;
             };
 
             case "role": {   
                 const rolePermission = values[0];
                 const configs = await db.configs.update({ rolePermission });
-                interaction.editReply(menus.configs.main({ configs, member, client, locale }));
+                await interaction.editReply(menus.configs.main({ configs, member, client, locale }));
                 return;
             };
 

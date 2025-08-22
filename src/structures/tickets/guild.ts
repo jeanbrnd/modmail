@@ -17,7 +17,7 @@ export default async function ticketGuildChannelStructure(data: ticketGuildChann
      const user = await findUser(client, ticket.userId);
 
      if(!user) {
-        message.reply(res.danger(t("errors.userNotFound", { lang: locale })));
+        await message.reply(res.danger(t("errors.userNotFound", { lang: locale })));
         return;
      };
      

@@ -39,7 +39,7 @@ export default async function ticketExistStructure(data: ticketExistDataProps) {
           files: attachments.length ? attachments : undefined
      });
      
-     message.react("📨");
+     await message.react("📨");
      
      return;
 };

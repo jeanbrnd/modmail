@@ -1,5 +1,3 @@
 import { setupCreators } from "#base";
 
-export const { createCommand, createEvent, createResponder } = setupCreators({
-    
-});
+export const { createCommand, createEvent, createResponder } = setupCreators();

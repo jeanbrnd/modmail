@@ -24,11 +24,11 @@ createCommand({
         const rolePermissionId = configs?.rolePermission;
 
         if(member.id !== env.OWNER_ID && rolePermissionId && !member.roles.cache.has(rolePermissionId)) {
-            interaction.editReply(res.danger(t("errors.notPermission", { lang: locale })));
+            await interaction.editReply(res.danger(t("errors.notPermission", { lang: locale })));
             return;
         };
 
-        interaction.editReply(menus.configs.main({ configs, member, client, locale }));
+        await interaction.editReply(menus.configs.main({ configs, member, client, locale }));
 
         return;
     }

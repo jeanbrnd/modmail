@@ -1,33 +1,41 @@
-# 🤖 Simple ModMail Bot for Discord
+# 🤖 ModMail Discord – Multi-Languages
 
-This is a basic ModMail bot for Discord, perfect for a starter template. Developed quickly, it offers a straightforward and effective way to manage communication between your server members and your moderation team. Feel free to use it and adapt it to your needs!
+> ModMail bot for Discord with support for multiple languages (Portuguese and English), ideal for serving users globally.
+
+---
+
+## Commands
+
+### /settings
+Customize the bot's settings, such as: log channel, ticket category, staff role, server, and more, using v2 components very quickly.
 
 ---
 
-> [!NOTE]
-> Este **projeto base** pode ser gerado usando a [Constant CLI](https://github.com/rinckodev/constatic).
-> Veja a documentação completa para esta base acessando: https://constatic-docs.vercel.app/docs/discord/start
+#### `.env` Settings:
 
-Este é a base de bot Discord mais completa que você já viu! Desenvolvido por [@rinckodev](https://github.com/rinckodev), este projeto usa TypeScript de uma forma incrível para fornecer estruturas completas e facilitar o desenvolvimento do seu bot Discord.
+- `BOT_TOKEN`: Bot token. Remember to enable the necessary intents.  
+- `OWNER_ID`: ID of the bot owner, who will have full permissions. You can also configure roles that will have access to commands via the /settings command.
 
 ---
+
+> [!NOTE] 
+> This project **base** can be generated using the [Constant CLI](https://github.com/rinckodev/constatic)
+> See the full documentation for this base by accessing: https://constatic-docs.vercel.app/docs/discord/start
+
+This is the most complete discord bot base you've ever seen! Developed by [@rinckodev](https://github.com/rinckodev), this project uses typescript in an incredible way to provide complete structures and facilitate the development of your discord bot.
 
 > [!WARNING]
-> **Versão do Node.js** necessária: 20.12 ou superior.
-
----
+> [NodeJs](https://nodejs.org/en) version required: 20.12 or higher
 
 ## Scripts
 
-- `dev`: executa o bot em modo de desenvolvimento.
-- `build`: compila o projeto.
-- `watch`: executa em modo de observação (monitora alterações de arquivos).
-- `start`: executa o bot compilado.
+- `dev`: running bot in development
+- `build`: build the project
+- `watch`: running in watch mode
+- `start`: running the compiled bot
 
----
+## Structures
 
-## Estruturas
-
-- [Comandos](https://constatic-docs.vercel.app/docs/discord/commands)
+- [Commands](https://constatic-docs.vercel.app/docs/discord/commands)
 - [Responder](https://constatic-docs.vercel.app/docs/discord/responders)
-- [Eventos](https://constatic-docs.vercel.app/docs/discord/events)
+- [Events](https://constatic-docs.vercel.app/docs/discord/events)

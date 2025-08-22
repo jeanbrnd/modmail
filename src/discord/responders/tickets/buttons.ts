@@ -19,7 +19,7 @@ createResponder({
                 const ticket = await db.tickets.delete(id);
                 
                 if(!ticket) {
-                    interaction.editReply(res.danger(t("errors.ticketNotFound", { lang: locale })));
+                    await interaction.editReply(res.danger(t("errors.ticketNotFound", { lang: locale })));
                     return;
                 };
 

@@ -23,7 +23,7 @@ export default function ticketMainMenu<R>(data: ticketMainDataProps): R {
               createSeparator({divider: true}),
               new ButtonBuilder({
                   custom_id: `ticket/close/${ticket.id}`,
-                  label:  t("menus.ticket.main.closeButton"),
+                  label:  t("menus.ticket.main.closeButton", { lang: guildLocale }),
                   style: ButtonStyle.Secondary
               }),
 

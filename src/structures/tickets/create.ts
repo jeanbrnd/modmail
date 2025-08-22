@@ -18,11 +18,10 @@ export default async function ticketCreateStructure(data: ticketCreateDataProps)
      const { author } = message;
           
      if(!guild) {
-        message.reply(res.danger(t("errors.serverNotFound", { lang: locale })));
+        await message.reply(res.danger(t("errors.serverNotFound", { lang: locale })));
         return;
      };
      
-
      const channel = await guild?.channels.create({ 
          name: `📭・ticket-${author.displayName}`,
          ...(configs.category ? { parent: configs.category } : { }),
@@ -40,15 +39,15 @@ export default async function ticketCreateStructure(data: ticketCreateDataProps)
      }).catch(() => null);
 
      if(!channel || channel.type !== ChannelType.GuildText) {
-        message.reply(res.danger(t("errors.ticketCreate", { lang: locale })));
+        await message.reply(res.danger(t("errors.ticketCreate", { lang: locale })));
         return;
      };
 
      const ticket = await db.tickets.create({ userId: author.id, channelId: channel.id, reason: message.content, });
      
-     message.reply(res.success(t("messages.ticketCreate", { author: author.id, lang: locale })));
+     await message.reply(res.success(t("messages.ticketCreate", { author: author.id, lang: locale })));
      
-     channel.send(menus.tickets.main({ message, ticket, guildLocale: guild.preferredLocale }));
+     await channel.send(menus.tickets.main({ message, ticket, guildLocale: guild.preferredLocale }));
    
      return;
 };

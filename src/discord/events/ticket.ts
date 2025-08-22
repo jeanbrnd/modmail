@@ -9,7 +9,7 @@ createEvent({
     event: "messageCreate",
     async run(message) {
         const { channel, author, client, guild } = message;
-    
+
         if(author.bot) return;
         
         switch(channel.type) {

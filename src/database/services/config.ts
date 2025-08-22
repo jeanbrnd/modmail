@@ -1,12 +1,13 @@
-import { Config } from "@prisma/client";
+import { Config, Prisma } from "@prisma/client";
 import prisma from "../prisma.js";
 
 class configService { 
+    
     public async get(): Promise<Config> {
         return await prisma.config.findFirst() ?? await prisma.config.create({ });
     };
     
-    public async update(data: Partial<Omit<Config, "id">>): Promise<Config> {
+    public async update(data: Prisma.ConfigUpdateInput): Promise<Config> {
         return await prisma.config.update({ where: { id: "default" }, data });
     };
 };
